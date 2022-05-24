@@ -1,0 +1,65 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e09eb683-dae3-4e8a-9685-ee96c745f660</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>Main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>SRV</Name>
+    <RootNamespace>ControleVirtual</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AutoPilotClass.py" />
+    <Compile Include="AcquisitionInterfaceClassF12021.py" />
+    <Compile Include="DataClass.py" />
+    <Compile Include="LabelsClass.py" />
+    <Compile Include="ThreadsClass.py" />
+    <Compile Include="LineFollowerClass.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmMainClass.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ListenerF12021.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DebugLog.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Singleton.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AcquisitionInterfaceClass.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmAppControllerClass.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ControllerClass.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
